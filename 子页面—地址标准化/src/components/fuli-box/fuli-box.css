@@ -1,0 +1,181 @@
+/* 福利盒子组件样式 */
+.fuli-box {
+    position: relative;
+    width: 100%;
+    height: 196px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.fuli-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./fuli-background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fuli-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 69px;
+}
+
+.fuli-h {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    width: 458px;
+    margin-bottom: 40px;
+}
+
+.fuli-h-h1 {
+    font-family: 'jingdonglangzhengti2', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 1.143;
+    color: transparent;
+    background: linear-gradient(135deg, #F96652 0%, #FF9B42 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0px 2px 29px rgba(94, 228, 247, 0.42);
+    margin: 0;
+    text-align: left;
+}
+
+.fuli-h-p {
+    position: relative;
+    width: 458px;
+    height: 28px;
+    font-family: 'PingFang SC', sans-serif;
+    font-size: 20px;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+}
+
+.fuli-text-normal {
+    color: #2A3347;
+    font-weight: 400;
+}
+
+.fuli-text-highlight {
+    font-family: 'jingdonglangzhengti2', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.143;
+    color: transparent;
+    background: linear-gradient(135deg, #0055FF 0%, #7167FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 2px;
+}
+
+.fuli-btn {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 13px 40px;
+    width: 174px;
+    height: 48px;
+    background: linear-gradient(135deg, #0055FF 0%, #7167FF 100%);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-sizing: border-box;
+}
+
+.fuli-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
+}
+
+.fuli-btn-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.fuli-btn-icon {
+    width: 16px;
+    height: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fuli-btn-icon svg {
+    width: 16px;
+    height: 13px;
+}
+
+/* 响应式设计 */
+@media (max-width: 1440px) {
+    .fuli-content {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    
+    .fuli-h {
+        width: auto;
+        max-width: 458px;
+    }
+    
+    .fuli-h-p {
+        width: auto;
+        max-width: 458px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fuli-box {
+        height: 196px; /* 保持固定高度 */
+    }
+    
+    .fuli-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .fuli-h {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    
+    .fuli-h-h1 {
+        font-size: 28px;
+    }
+    
+    .fuli-h-p {
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+        flex-wrap: wrap;
+    }
+    
+    .fuli-text-highlight {
+        font-size: 20px;
+    }
+    
+    .fuli-btn {
+        width: auto;
+        min-width: 174px;
+    }
+}

@@ -1,0 +1,230 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #2A3347;
+    line-height: 1.6;
+    min-width: 1024px; /* 设置最小宽度为1024px */
+    overflow-x: auto; /* 当宽度小于1024px时允许横向滑动 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 容器样式 */
+.container {
+    width: 100%;
+    padding: 0 0 0 32px; /* 只保留左侧内边距 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* 头部样式 */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: 70px;
+    min-width: 1024px; /* 确保最小宽度 */
+    width: 100%; /* 保持宽度100% */
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(24px);
+    z-index: -1;
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #ECECEC;
+}
+
+/* 左侧组件样式 */
+.header-liftgroup {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Logo样式 */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    width: 100px;
+    height: 36px;
+    object-fit: contain;
+}
+
+/* 导航菜单样式 */
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.tab-default {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.tab-text {
+    display: flex;
+    flex-direction: column;
+    gap: -14px;
+    position: relative;
+}
+
+.text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 4.375em;
+    color: #2A3347;
+}
+
+.tab-default.active .text {
+    font-weight: 600;
+    background: linear-gradient(to right, #0032FF, #875DFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.select {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(to right, #0055FF, #7167FF);
+    display: none;
+    position: relative;
+    top: -3px;
+}
+
+.tab-default.active .select {
+    display: block;
+}
+
+.icon-menu {
+    width: 12px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-icon {
+    width: 12px;
+    height: 12px;
+    object-fit: contain;
+}
+
+/* 右侧组件样式 */
+.header-rightgroup {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 40px;
+}
+
+/* 电话样式 */
+.phone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 229px;
+    justify-content: flex-end;
+}
+
+.phone-icon {
+    width: 30.88px;
+    height: 30px;
+    position: relative;
+}
+
+.icon-shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../assets/img/phone-icon.png") no-repeat center center;
+    background-size: contain;
+}
+
+.number {
+    width: 140px;
+    height: 20px;
+    background-image: url("number.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    text-indent: -9999px; /* 隐藏文本内容 */
+    overflow: hidden;
+}
+
+/* 登录按钮样式 */
+.button-login {
+    font-size: 16px;
+    color: #2A3347;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/* 注册按钮样式 */
+.button-register {
+    width: 128px;
+    height: 70px;
+    background: linear-gradient(to bottom right, #4A86FF, #0357FF);
+    box-shadow: inset 0px 0px 19px 0px rgba(255, 255, 255, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-register span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* 响应式设计 - 只在屏幕宽度大于等于1024px时生效 */
+@media (min-width: 1024px) {
+    @media (max-width: 1200px) {
+        /* 1200px以下的适配 */
+        /* 移除了header-liftgroup的gap适配，保持60px */
+        .nav-item {
+            gap: 30px;
+        }
+    }
+}
+
+/* 确保body在任何屏幕宽度下都保持固定宽度并允许横向滚动 */
+body {
+    min-width: 1024px;
+    overflow-x: auto;
+}

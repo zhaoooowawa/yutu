@@ -1,0 +1,440 @@
+/* MapShow 组件样式 */
+.mapshow {
+    position: relative;
+    width: 1440px;
+    height: 904px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 背景渐变 */
+.mapshow-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 904px;
+    background: linear-gradient(180deg, #FDFEFF 0%, #F9FAFF 100%);
+    z-index: -1;
+}
+
+/* 标题区域 */
+.mapshow-h {
+    position: absolute;
+    top: 102px;
+    left: 578px;
+    width: 284px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.mapshow-h .h1 {
+    margin: 0;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.4;
+    text-align: center;
+    color: #1A1A1A;
+    width: 100%;
+}
+
+.mapshow-h .h2 {
+    margin: 0;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    color: #383838;
+    width: 100%;
+}
+
+/* 地图区域 */
+.mapshow-map {
+    position: absolute;
+    top: 215px;
+    left: 90px;
+    width: 1260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* 标签页 */
+.map-tab {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.map-tab-item {
+    position: relative;
+    width: 236px;
+    height: 140px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 3px 20.5px 0px rgba(33, 54, 84, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.tab-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 236px;
+    height: 140px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.tab-image {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 236px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.tab-image.imp-zhongduan {
+    background-image: url('../../assets/img/imp-zhongduan.png');
+}
+
+.tab-image.img-guanggao {
+    background-image: url('../../assets/img/img-guanggao.png');
+}
+
+.tab-image.img-wuliu {
+    background-image: url('../../assets/img/img-wuliu.png');
+}
+
+.tab-image.img-fuwu {
+    background-image: url('../../assets/img/img-fuwu.png');
+}
+
+.tab-image.img-fengxian {
+    background-image: url('../../assets/img/img-fengxian.png');
+}
+
+.tab-shadow {
+    position: absolute;
+    top: 83px;
+    left: 0;
+    width: 236px;
+    height: 57px;
+    background: linear-gradient(180deg, rgba(242, 248, 255, 0) 4.29%, rgba(248, 251, 255, 0.83) 72.6%);
+    pointer-events: none;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.tab-loading-line {
+    position: absolute;
+    top: 137px;
+    left: -7px;
+    width: 0px;
+    height: 3px;
+    background: #2D40FF;
+    border-radius: 4px;
+    box-shadow: -3px 4px 14.8px 0px rgba(28, 94, 148, 0.16);
+    transition: none;
+    z-index: 3;
+}
+
+.tab-loading-line.active {
+    background: #2D40FF;
+}
+
+.tab-text {
+    position: absolute;
+    top: 110px;
+    left: 70px;
+    width: 96px;
+    height: 22px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    text-align: center;
+    color: #575757;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.tab-text.active {
+    font-weight: 600;
+    background: linear-gradient(135deg, #0032FF 0%, #875DFF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* 地图详情 */
+.map-detail {
+    position: relative;
+    width: 100%;
+    height: 472px;
+    box-shadow: 0px 3px 20.5px 0px rgba(33, 54, 84, 0.1);
+    border-radius: 4px;
+}
+
+.map-detail-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1260px;
+    height: 472px;
+    background: linear-gradient(135deg, #FFFFFF 3.0%,#FFFFFF 70.0%, #F2F8FF 100%);
+    border: 0px solid #979797;
+    border-radius: 4px;
+    box-shadow: inset 0px 2px 0px 1px rgba(255, 255, 255, 1), 
+                inset 0px 4px 5.8px 0px rgba(255, 255, 255, 0.25);
+}
+
+/* 地图图片区域 */
+.map-detail-img {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 880px;
+    height: 471px;
+    border-radius: 4px 0 0 4px;
+}
+
+.img-maxmap {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 880px;
+    height: 472px;
+    background: #D4D4D4;
+}
+
+.img-shadow {
+    position: absolute;
+    top: 1px;
+    right: 0;
+    width: 180px;
+    height: 472px;
+    background: linear-gradient(270deg, #FFFFFF 1.55%, rgba(255, 255, 255, 0) 100%);
+}
+
+/* 内容区域 */
+.map-detail-content {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 320px;
+    height: 165px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.content-title {
+    margin: 0;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #383838;
+}
+
+.content-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 1px 8px 1px 4px;
+    height: 24px;
+    background: linear-gradient(90deg, #266FF2 5.57%, #3AC2FB 100%);
+    border-radius: 12px;
+}
+
+.tag-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+}
+
+.tag-icon-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.tag-icon-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #FFFFFF;
+    border-radius: 50%;
+}
+
+.icon-group {
+    position: relative;
+    width: 10.29px;
+    height: 9.13px;
+}
+
+.icon-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.tag-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #FFFFFF;
+    width: 56px;
+}
+
+.content-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content-tags .tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #757575;
+    white-space: nowrap;
+}
+
+.content-description {
+    width: 320px;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 2;
+    color: #757575;
+    text-align: justify;
+}
+
+/* 按钮组 */
+.map-detail-btngroup {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 48px;
+    background: linear-gradient(90deg, #0055FF 4.36%, #7167FF 102.18%);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary span {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.btn-secondary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 48px;
+    
+    border: 1px solid #0055FF;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary span {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #0055FF;
+}
+
+/* 悬停效果 */
+.map-tab-item:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #D6E4FD;
+}
+
+/* 响应式设计 */
+@media (max-width: 1440px) {
+    .mapshow {
+        width: 100%;
+        max-width: 1440px;
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .mapshow {
+        transform: scale(0.8);
+    }
+}
+
+@media (max-width: 1000px) {
+    .mapshow {
+        transform: scale(0.7);
+    }
+}

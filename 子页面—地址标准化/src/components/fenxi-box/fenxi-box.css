@@ -1,0 +1,278 @@
+/* 经营分析组件样式 */
+.fenxi-box {
+    width: 100%;
+    min-width: 1440px;
+    height: 693px;
+    background: rgba(248, 251, 255, 0.83);
+    position: relative;
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: auto;
+}
+
+/* 标题区域 */
+.card-h {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 284px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+.main-title {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.4em;
+    text-align: center;
+    color: #1A1A1A;
+    margin: 0;
+    width: 100%;
+}
+
+.subtitle {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4em;
+    text-align: center;
+    color: #383838;
+    margin: 0;
+    width: 100%;
+}
+
+/* 卡片容器 */
+.cards-container {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 173px;
+    width: 1260px;
+}
+
+/* 卡片基础样式 */
+.shangxiacard {
+    width: 620px;
+    height: 460px;
+    position: relative;
+    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+}
+
+.shangxiacard1 {
+    display: block;
+    /* 第一个卡片特定样式 */
+}
+
+.shangxiacard2 {
+    display: block;
+    /* 第二个卡片特定样式 */
+}
+
+/* 卡片背景 */
+.shangxiacard-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 620px;
+    height: 460px;
+    border-radius: 4px;
+}
+
+.background-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 620px;
+    height: 460px;
+    background: #FFFFFF;
+    border-radius: 4px;
+}
+
+.background-rectangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 620px;
+    height: 200px;
+    background: linear-gradient(180deg, #F6FAFF 6.24%, rgba(246, 250, 255, 0) 95.51%);
+    border-radius: 4px 4px 0 0;
+}
+
+/* 卡片内容 */
+.shangxiacard-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    width: 252px;
+}
+
+/* 卡片标题 */
+.card-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+}
+
+.h1-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4em;
+    color: #383838;
+    flex: none;
+    width: auto;
+}
+
+.h1-xiangqingicon {
+    width: 6.74px;
+    height: 13.87px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.h1-xiangqingicon:hover {
+    transform: translateX(2px);
+}
+
+.h1-xiangqingicon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* 特性点列表 */
+.card-points {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.point-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.point-dot {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.ellipse {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 6px;
+    height: 6px;
+    background: #575757;
+    border-radius: 50%;
+}
+
+.point-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4em;
+    color: #575757;
+    white-space: nowrap;
+}
+
+/* 响应式设计 */
+@media (max-width: 1440px) {
+    .fenxi-box {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+    
+    .card-h {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .cards-container {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1260px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .cards-container {
+        flex-direction: column;
+        gap: 30px;
+        width: 620px;
+    }
+    
+    .fenxi-box {
+        height: auto;
+        min-height: 693px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fenxi-box {
+        padding: 20px;
+    }
+    
+    .card-h {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .main-title {
+        font-size: 28px;
+    }
+    
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .cards-container {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+    
+    .shangxiacard {
+        width: 100%;
+        max-width: 620px;
+    }
+    
+    .shangxiacard-background,
+    .background-shadow,
+    .background-rectangle {
+        width: 100%;
+    }
+    
+    .shangxiacard-content {
+        width: calc(100% - 60px);
+    }
+    
+    .card-points {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

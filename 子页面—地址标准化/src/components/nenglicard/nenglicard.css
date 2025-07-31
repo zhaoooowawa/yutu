@@ -1,0 +1,342 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fbff;
+    padding: 20px;
+}
+
+/* 主容器 */
+.nenglicard-container {
+    width: 1440px;
+    height: 1033px;
+    margin: 0 auto;
+    background: rgba(248, 251, 255, 0.83);
+    position: relative;
+}
+
+/* 标题区域 */
+.card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    left: 578px;
+    width: 284px;
+}
+
+.main-title {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.4;
+    text-align: center;
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.sub-title {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.4;
+    text-align: center;
+    color: #383838;
+    margin: 0;
+}
+
+/* 卡片内容区域 */
+.cards-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* 中等卡片行 */
+.mid-cards-row {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    top: 173px;
+    left: 90px;
+}
+
+/* 中等卡片样式 */
+.midcard {
+    width: 620px;
+    height: 380px;
+    background-image: url('./midcard-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.07);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 170px;
+    position: relative;
+}
+
+.midcard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 266px;
+}
+
+.card-title {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #383838;
+    margin: 0;
+}
+
+.card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-icon {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.feature-icon .icon-bg {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.feature-icon .icon-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 5px;
+}
+
+.feature-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #575757;
+    width: 240px;
+}
+
+/* 试用按钮 */
+.try-button {
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(135deg, #0055FF 0%, #7167FF 100%);
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.try-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
+}
+
+.try-button:active {
+    transform: translateY(0);
+}
+
+.try-button {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+/* 大卡片 */
+.maxcard {
+    position: absolute;
+    top: 573px;
+    left: 90px;
+    width: 1260px;
+    height: 400px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 12px 0px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+}
+
+.maxcard-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./maxcard-background.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+}
+
+.maxcard-content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 170px;
+    height: 144px;
+}
+
+.maxcard-title {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #383838;
+    margin: 0 0 20px 0;
+}
+
+.maxcard-features {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.maxcard-feature {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.maxcard-icon {
+    width: 14px;
+    height: 14px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.icon-bg {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 2px;
+}
+
+.icon-svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 5px;
+}
+
+.maxcard-feature-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #757575;
+}
+
+.maxcard-try-button {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: 120px;
+    height: 40px;
+    background: linear-gradient(135deg, #0055FF 0%, #7167FF 100%);
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.maxcard-try-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 85, 255, 0.3);
+}
+
+.maxcard-try-button:active {
+    transform: translateY(0);
+}
+
+/* 响应式设计 */
+@media (max-width: 1480px) {
+    .nenglicard-container {
+        width: 100%;
+        max-width: 1440px;
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nenglicard-container {
+        transform: scale(0.8);
+    }
+    
+    .mid-cards-row {
+        flex-direction: column;
+        gap: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 620px;
+    }
+    
+    .card-header {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .maxcard {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 1260px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nenglicard-container {
+        transform: scale(0.6);
+        height: auto;
+        min-height: 1033px;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}

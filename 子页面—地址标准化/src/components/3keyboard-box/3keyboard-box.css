@@ -1,0 +1,154 @@
+/* 3Keyboard Box 组件样式 */
+.keyboard-box-3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.keyboard-container {
+    width: 1260px;
+    height: 88px;
+    background: linear-gradient(180deg, #F9FBFF 0%, rgba(255, 255, 255, 0.68) 100%);
+    border-radius: 4px;
+    box-shadow: 3px 6px 18.7px 0px rgba(27, 60, 122, 0.06);
+    backdrop-filter: blur(47.2px);
+    position: relative;
+}
+
+.keyboard-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 48px;
+}
+
+.content-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 48px;
+}
+
+.content-item:first-child {
+    width: 380px;
+}
+
+.content-item:not(:first-child) {
+    width: 400px;
+}
+
+.line {
+    width: 1px;
+    height: 48px;
+    background-color: #D0D0D0;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.content-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.h1 {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4em;
+    letter-spacing: 0.66px;
+    color: #3A3A3A;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.p {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4em;
+    letter-spacing: 0.5px;
+    color: #717075;
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* 响应式设计 */
+@media (max-width: 1280px) {
+    .keyboard-container {
+        width: 95%;
+        max-width: 1260px;
+    }
+    
+    .content-item:first-child {
+        width: 30%;
+        min-width: 300px;
+    }
+    
+    .content-item:not(:first-child) {
+        width: 32%;
+        min-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .keyboard-container {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .keyboard-content {
+        flex-direction: column;
+        position: static;
+        gap: 15px;
+        height: auto;
+    }
+    
+    .content-item {
+        width: 100% !important;
+        justify-content: center;
+    }
+    
+    .content-item:not(:first-child) {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .line {
+        width: 80%;
+        height: 0px;
+        border-left: none;
+        border-top: 1px solid #E8E8E8;
+    }
+    
+    .h1 {
+        font-size: 18px;
+    }
+    
+    .p {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,177 @@
+/* Keyboard Box 组件样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    color: #1A1A1A;
+    line-height: 1.4;
+}
+
+/* Keyboard Box 容器样式 */
+.keyboard-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    overflow-x: auto;
+}
+
+/* Keyboard 容器样式 */
+.keyboard-container {
+    position: relative;
+    width: 1260px;
+    min-width: 1260px;
+    height: 126px;
+    margin-left: 90px;
+    background: linear-gradient(180deg, #F9FBFF 0%, rgba(255, 255, 255, 0.68) 100%);
+    border-radius: 4px;
+    box-shadow: 3px 6px 18.7px 0px rgba(27, 60, 122, 0.06);
+    backdrop-filter: blur(47.2px);
+    overflow: visible;
+    opacity: 1;
+}
+
+
+
+/* Keyboard 内容样式 */
+.keyboard-content {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    height: 86px;
+}
+
+/* 内容项样式 */
+.content-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 290px;
+    height: 86px;
+}
+
+
+
+/* 分隔线样式 */
+.line {
+    width: 1px;
+    height: 86px;
+    background-color: #D0D0D0;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+/* 内容文本样式 */
+.content-text,
+.keyboard-content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 270px;
+}
+
+/* 标题行样式 */
+.h1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+/* 图标样式 */
+.h1-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.h1-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    
+}
+
+
+
+/* 标题文本样式 */
+.h1-text {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4em;
+    color: #1A1A1A;
+    width: 238px;
+    text-align: left;
+}
+
+/* 文本颜色样式 */
+.text-blue {
+    color: #0055FF;
+}
+
+.text-black {
+    color: #1A1A1A;
+}
+
+/* 高亮标题样式 */
+.h1-text.highlight {
+    color: #0055FF;
+    position: relative;
+    overflow: hidden;
+}
+
+.h1-text.highlight::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #0055FF, #7167FF);
+    
+}
+
+
+
+/* 副标题样式 */
+.h2 {
+    font-family: 'PingFang SC', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4em;
+    letter-spacing: 0.5px;
+    color: #717075;
+    width: 100%;
+    text-align: left;
+}
+
+/* 响应式设计 - 保持keyboard-container固定宽度和布局 */
+@media (max-width: 1300px) {
+    /* keyboard-container保持固定宽度，不进行适配 */
+    /* 移除了原有的响应式调整 */
+}
+
+@media (max-width: 768px) {
+    /* keyboard-container保持固定宽度和布局，不进行适配 */
+    /* 移除了原有的响应式调整 */
+}
+
+@media (max-width: 480px) {
+    /* keyboard-container保持固定宽度和布局，不进行适配 */
+    /* 移除了原有的响应式调整 */
+}
